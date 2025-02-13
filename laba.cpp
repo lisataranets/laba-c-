@@ -10,18 +10,16 @@ void printset(const set<char>& unique_chars) {
     }
     else {
         cout << "Множество символов:\n";
-        int index = 1; 
         for (char ch : unique_chars) {
-            cout << ch << endl; 
-            index++;
+            cout << ch << endl;
         }
-        cout << "Количество элементов в множестве: " << index << endl;
+        cout << "Количество элементов в множестве: " << unique_chars.size() << endl;
     }
 }
 
 bool is_punctuation_or_comparison(char ch) {
     const string punctuations = ".,!?;:()[]{}\"'";
-    const string comparisons = "== != < > <= >=";
+    const string comparisons = "==!=<><=>=";
     return punctuations.find(ch) != string::npos || comparisons.find(ch) != string::npos;
 }
 
