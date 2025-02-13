@@ -17,7 +17,7 @@ void printset(const set<char>& unique_chars) {
     }
 }
 
-bool is_punctuation_or_comparison(char ch) {
+bool punctuation_or_comparison(char ch) {
     const string punctuations = ".,!?;:()[]{}\"'";
     const string comparisons = "==!=<><=>=";
     return punctuations.find(ch) != string::npos || comparisons.find(ch) != string::npos;
@@ -37,7 +37,7 @@ int main() {
 
     set<char> unique_chars;
     for (char ch : input) {
-        if (is_punctuation_or_comparison(ch)) {
+        if (punctuation_or_comparison(ch)) {
             unique_chars.insert(ch);
         }
     }
