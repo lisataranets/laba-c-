@@ -10,19 +10,19 @@ void printset(const set<char>& unique_chars) {
     }
     else {
         cout << "Множество символов:\n";
-        int index = 1; // Счетчик для нумерации
+        int index = 1; 
         for (char ch : unique_chars) {
-            cout << index++ << ". " << ch << endl; // Вывод символа с номером
+            cout << ch << endl; 
+            index++;
         }
+        cout << "Количество элементов в множестве: " << index << endl;
     }
 }
 
 bool is_punctuation_or_comparison(char ch) {
     const string punctuations = ".,!?;:()[]{}\"'";
     const string comparisons = "== != < > <= >=";
-
-    return punctuations.find(ch) != string::npos ||
-        comparisons.find(ch) != string::npos;
+    return punctuations.find(ch) != string::npos || comparisons.find(ch) != string::npos;
 }
 
 int main() {
